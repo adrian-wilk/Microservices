@@ -1,0 +1,15 @@
+server.port: 8084
+app:
+  name: Kolobombo
+my:
+  greeting: Hello, welcome to ${app.name}
+  list:
+    values: One, Two, Three
+
+db:
+  values: "{connectionString: 'http//___', userName: 'foo', password: 'pass'}"
+  connection: test-connection-string-here
+  host: 129.0.0.1
+  port: 2400
+
+management.endpoints.web.exposure.include: "*"

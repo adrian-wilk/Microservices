@@ -1,0 +1,23 @@
+server.port: 8084
+app:
+   name: Kolobombo
+my:
+   greeting: Hello, welcome to ${app.name}
+   list:
+      values: One, Two, Three
+
+db:
+   values: "{connectionString: 'http//___', userName: 'foo', password: 'pass'}"
+   connection: connection-string-here
+   host: 127.0.0.1
+   port: 1200
+
+management.endpoints.web.exposure.include: "*"
+spring:
+   profiles:
+      active: test
+   cloud:
+     config:
+        uri: http://localhost:8888
+   application:
+      name: spring-boot-config
